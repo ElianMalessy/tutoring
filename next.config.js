@@ -1,6 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const withPlugins = require('next-compose-plugins');
+const withImages = require('next-images');
 
-module.exports = nextConfig
+const nextConfig = {
+  images: {
+    domains: ['gluiq.com'],
+    disableStaticImages: true
+  }
+};
+
+module.exports = withPlugins([withImages()], nextConfig);
