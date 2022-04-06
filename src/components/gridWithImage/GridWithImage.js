@@ -13,7 +13,7 @@ export default function StatsGridWithImage() {
         backgroundPosition='center'
         backgroundRepeat='no-repeat'
         position={'absolute'}
-        width={'60%'}
+        width={'62%'}
         insetY={0}
         right={0}
       >
