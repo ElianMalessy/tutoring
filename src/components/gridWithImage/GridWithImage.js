@@ -1,9 +1,11 @@
-import { Stack, Container, Box, Flex, Text, Heading, SimpleGrid } from '@chakra-ui/react';
+import { Stack, Container, Box, Flex, Text, Heading, SimpleGrid, useColorMode } from '@chakra-ui/react';
 import { Fragment } from 'react';
 
 export default function StatsGridWithImage() {
+  const { colorMode } = useColorMode();
+
   return (
-    <Box bg={'gray.800'} position={'relative'} zIndex={0} w='100vw'>
+    <Box position={'relative'} zIndex={0} w='100vw'>
       <Flex
         flex={1}
         zIndex={0}
@@ -17,13 +19,14 @@ export default function StatsGridWithImage() {
         insetY={0}
         right={0}
       >
-        <Flex bgGradient={'linear(to-r, gray.800 8%, transparent)'} w={'full'} h={'full'} />
+        {colorMode == 'dark' && <Flex bgGradient={'linear(to-r, gray.800 8%, transparent)'} w={'full'} h={'full'} />}
+        {colorMode == 'light' && <Flex bgGradient={'linear(to-r, white 8%, transparent)'} w={'full'} h={'full'} />}
       </Flex>
       <Container maxW={'7xl'} zIndex={10} position={'relative'}>
         <Stack direction={{ base: 'column', lg: 'row' }}>
-          <Stack flex={1} color={'gray.400'} justify={{ lg: 'center' }} py={{ base: 4, md: 20, xl: 60 }}>
+          <Stack flex={1} justify={{ lg: 'center' }} py={{ base: 4, md: 20, xl: 60 }}>
             <Box mb={{ base: 8, md: 20 }}>
-              <Heading color={'white'} mb={5} fontSize={{ base: '3xl', md: '5xl' }}>
+              <Heading mb={5} fontSize={{ base: '3xl', md: '5xl' }}>
                 “Everybody should learn to program a computer, because it teaches you how to think.”
                 <Text
                   fontFamily={'heading'}
@@ -36,22 +39,15 @@ export default function StatsGridWithImage() {
                   - Steve Jobs
                 </Text>
               </Heading>
-
-              <Text fontSize={'xl'} color={'gray.400'}>
-                The NewLife™ technology allows you to monitor your crops and get complete insights at real time. The
-                proprietary software/hardware ecosystem prevents your plants from getting neglected.
-              </Text>
             </Box>
 
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
               {stats.map((stat) => (
                 <Box key={stat.title}>
-                  <Text fontFamily={'heading'} fontSize={'3xl'} color={'white'} mb={3}>
+                  <Text fontFamily={'heading'} fontSize={'3xl'} mb={3}>
                     {stat.title}
                   </Text>
-                  <Text fontSize={'xl'} color={'gray.400'}>
-                    {stat.content}
-                  </Text>
+                  <Text fontSize={'xl'}>{stat.content}</Text>
                 </Box>
               ))}
             </SimpleGrid>
@@ -64,41 +60,41 @@ export default function StatsGridWithImage() {
 }
 
 const StatsText = ({ children }) => (
-  <Text as={'span'} fontWeight={700} color={'white'}>
+  <Text as={'span'} fontWeight={700}>
     {children}
   </Text>
 );
 
 const stats = [
   {
-    title: '10+',
+    title: 'Free',
     content: (
       <Fragment>
-        <StatsText>Software modules</StatsText> for detailed monitoring and real-time analytics
+        <StatsText>Tutoring</StatsText> so that it is easier for people of all backgrounds to be exposed to coding.
       </Fragment>
     )
   },
   {
-    title: '24/7',
+    title: 'Structured',
     content: (
       <Fragment>
-        <StatsText>Analytics</StatsText> enabled right in your dashboard without history limitations
+        <StatsText>Curriculum </StatsText> and teaching environment where students can thrive.
       </Fragment>
     )
   },
   {
-    title: '13%',
+    title: '1 on 1',
     content: (
       <Fragment>
-        <StatsText>Farms</StatsText> in North America has chosen NewLife™ as their management solution
+        <StatsText>Sessions</StatsText> to help students and guide them to solve their individual problems.
       </Fragment>
     )
   },
   {
-    title: '250M+',
+    title: 'Group',
     content: (
       <Fragment>
-        <StatsText>Plants</StatsText> currently connected and monitored by the NewLife™ software
+        <StatsText>Classes</StatsText> where students are clustered together by skill level and can learn with friends.
       </Fragment>
     )
   }
