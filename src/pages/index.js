@@ -1,9 +1,8 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../..//styles/Home.module.css';
+import styles from '../../styles/Home.module.css';
 import Navbar from '../components/navbar/Navbar';
 import { Fragment } from 'react';
-import { Box } from '@chakra-ui/react';
+import { Center } from '@chakra-ui/react';
 import StatsGridWithImage from '../components/gridWithImage/GridWithImage';
 export default function Home() {
   return (
@@ -17,13 +16,17 @@ export default function Home() {
         </Head>
 
         <main className={styles.main}>
-          <strong className={styles.title}>Welcome to DCT!</strong>
-          <p className={styles.description}>
-            Learn how to
-            <code className={styles.code}>code</code>
-          </p>
-
-          <StatsGridWithImage />
+          <StatsGridWithImage>
+            <Center w='100vw' mt='1rem'>
+              <strong className={styles.title}>Welcome to DCT!</strong>
+            </Center>
+            <Center w='100vw'>
+              <p className={styles.description}>
+                Learn how to
+                <code className={styles.code}>code</code>
+              </p>
+            </Center>
+          </StatsGridWithImage>
         </main>
       </div>
     </Fragment>

@@ -14,7 +14,6 @@ export default function Navbar() {
       justify='space-between'
       wrap='wrap'
       w='100%'
-      mb={8}
       p={8}
       bg={['grey']}
       position='sticky'

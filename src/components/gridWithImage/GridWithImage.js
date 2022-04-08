@@ -1,11 +1,12 @@
 import { Stack, Container, Box, Flex, Text, Heading, SimpleGrid, useColorMode } from '@chakra-ui/react';
 import { Fragment } from 'react';
 
-export default function StatsGridWithImage() {
+export default function StatsGridWithImage({ children }) {
   const { colorMode } = useColorMode();
 
   return (
     <Box position={'relative'} zIndex={0} w='100vw'>
+      {children}
       <Flex
         flex={1}
         zIndex={0}
@@ -19,12 +20,26 @@ export default function StatsGridWithImage() {
         insetY={0}
         right={0}
       >
-        {colorMode == 'dark' && <Flex bgGradient={'linear(to-r, gray.800 8%, transparent)'} w={'full'} h={'full'} />}
+        {colorMode == 'dark' && (
+          <Flex
+            style={{
+              background:
+                'linear-gradient(to right, #1A202C 8%, transparent), linear-gradient(to bottom, #1A202C, transparent 50%)'
+            }}
+            w={'full'}
+            h={'full'}
+          />
+        )}
         {colorMode == 'light' && <Flex bgGradient={'linear(to-r, white 8%, transparent)'} w={'full'} h={'full'} />}
       </Flex>
       <Container maxW={'7xl'} zIndex={10} position={'relative'}>
-        <Stack direction={{ base: 'column', lg: 'row' }}>
-          <Stack flex={1} justify={{ lg: 'center' }} py={{ base: 4, md: 20, xl: 60 }}>
+        <Stack direction={{ base: 'column', lg: 'row' }} mb='3rem'>
+          <Stack
+            flex={1}
+            justify={{ lg: 'center' }}
+            py={{ base: 4, md: 20, xl: 0 }}
+            style={{ paddingTop: '5rem !important' }}
+          >
             <Box mb={{ base: 8, md: 20 }}>
               <Heading mb={5} fontSize={{ base: '3xl', md: '5xl' }}>
                 “Everybody should learn to program a computer, because it teaches you how to think.”
@@ -70,7 +85,7 @@ const stats = [
     title: 'Free',
     content: (
       <Fragment>
-        <StatsText>Tutoring</StatsText> so that it is easier for people of all backgrounds to be exposed to coding.
+        <StatsText>Tutoring</StatsText> to make it easier for people of all backgrounds to be exposed to coding.
       </Fragment>
     )
   },
