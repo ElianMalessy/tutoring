@@ -18,6 +18,7 @@ export default function MenuLinks() {
       </Button>
       <MenuItem to='/'>Home</MenuItem>
       <MenuItem to='/signup'>Signup</MenuItem>
+      <MenuItem to='/classes'>Classes</MenuItem>
       <MenuItem to='/tutors'>Tutors</MenuItem>
     </Stack>
   );
