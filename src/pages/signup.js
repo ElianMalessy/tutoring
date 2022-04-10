@@ -11,7 +11,17 @@ export default function signup() {
       <main>
         <Flex justify={'center'} py={12}>
           <Stack>
-            Google Form
+            <iframe
+              src='https://docs.google.com/forms/d/e/1FAIpQLScUNb3u1DgVhy0TrJhjfa5pTDN5nD5BnMq7hNTmfJ19_5wqbQ/viewform?embedded=true'
+              width='640'
+              height='3000'
+              frameBorder='0'
+              marginHeight='0'
+              marginWidth='0'
+              scrolling='no'
+            >
+              Loading…
+            </iframe>
             <CardWithIllustration />
           </Stack>
         </Flex>
