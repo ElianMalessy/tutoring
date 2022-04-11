@@ -17,7 +17,7 @@ export default function MenuLinks() {
         {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
       </Button>
       <MenuItem to='/'>Home</MenuItem>
-      <MenuItem to='/signup'>Signup</MenuItem>
+      <MenuItem to='https://forms.gle/yoZH6XCvBq4VX8yZ9'>Sign up</MenuItem>
       <MenuItem to='/classes'>Classes</MenuItem>
       <MenuItem to='/tutors'>Tutors</MenuItem>
     </Stack>

@@ -48,9 +48,9 @@ export default function classes() {
               </Btext>
               <Btext mb='0.5rem'>
                 Intermediate students are introduced to more advanced programming concepts with Javascript such as
-                datastructures as well as how to make complex websites with user authentication and databases.
+                datastructures, as well as how to make complex websites with user authentication and databases.
               </Btext>
-              <Button onClick={() => router.push('/signup')}>Sign Up</Button>
+              <Button onClick={() => router.push('https://forms.gle/yoZH6XCvBq4VX8yZ9')}>Sign up</Button>
             </Card>
             <Card bg={bg} py='0.75rem'>
               <Heading textAlign={'center'}>1 on 1 Lessons</Heading>
@@ -65,7 +65,7 @@ export default function classes() {
                 tutors.
               </Btext>
               <Btext mb='0.5rem'>Classes meet once per week.</Btext>
-              <Button onClick={() => router.push('/signup')}>Sign Up</Button>
+              <Button onClick={() => router.push('https://forms.gle/yoZH6XCvBq4VX8yZ9')}>Sign up</Button>
             </Card>
           </SimpleGrid>
         </main>

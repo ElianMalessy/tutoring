@@ -1,6 +1,6 @@
 import { Stack, Container, Box, Flex, Text, Heading, SimpleGrid, useColorMode } from '@chakra-ui/react';
 import { Fragment } from 'react';
-
+import Newsletter from '../newsletter/Newsletter';
 export default function StatsGridWithImage({ children }) {
   const { colorMode } = useColorMode();
 
@@ -69,6 +69,9 @@ export default function StatsGridWithImage({ children }) {
           </Stack>
           <Flex flex={1} />
         </Stack>
+        <Flex align={'center'} justify={'center'} py={12}>
+          <Newsletter />
+        </Flex>
       </Container>
     </Box>
   );
