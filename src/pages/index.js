@@ -4,6 +4,8 @@ import Navbar from '../components/navbar/Navbar';
 import { Fragment } from 'react';
 import { Center } from '@chakra-ui/react';
 import StatsGridWithImage from '../components/gridWithImage/GridWithImage';
+import Typical from 'react-typical';
+
 export default function Home() {
   // make the steve jobs quote and the stuff under it animate in, swoop in from left to right
 
@@ -24,7 +26,9 @@ export default function Home() {
             <Center w='100vw'>
               <p className={styles.description}>
                 Learn how to
-                <code className={styles.code}>code</code>
+                <code className={styles.code}>
+                  <Typical loop={Infinity} wrapper='b' steps={['code', 2000, '', 2000]} />
+                </code>
               </p>
             </Center>
           </StatsGridWithImage>
