@@ -20,7 +20,7 @@ export default function classes() {
           <SimpleGrid h='100%' gap={4} maxW='80vw' py='1rem'>
             <Heading mt='0.5rem'>Our Classes</Heading>
             <Text mt='-1rem'>
-              Note: As of now, our classes teach exclusively Scratch, HTML, CSS, and javascript. There may be an
+              Note: As of now, our classes teach exclusively Scratch, HTML, CSS, and Javascript. There may be an
               expansion to include other languages in the future.
             </Text>
             <hr />
@@ -33,21 +33,21 @@ export default function classes() {
                 classes where students are grouped together with a max size of 4 students.
               </Btext>
               <Btext>The level of tutoring ranges from beginner to intermediate.</Btext>
-              <Btext>Classes meet twice per week.</Btext>
+              <Btext mb='0.5rem'>Classes meet twice per week.</Btext>
               <hr />
               <Btext fontWeight={700} fontSize={'2rem'}>
                 Beginner:
               </Btext>
-              <Btext>
-                Beginner students are introduced to core programming concepts with scratch and move on to javascript
+              <Btext mb='0.5rem'>
+                Beginner students are introduced to core programming concepts with scratch and move on to Javascript
                 which they will use to create websites.
               </Btext>
               <hr />
               <Btext fontWeight={700} fontSize={'2rem'}>
                 Intermediate:
               </Btext>
-              <Btext>
-                Intermediate students are introduced to more advanced programming concepts with javascript such as
+              <Btext mb='0.5rem'>
+                Intermediate students are introduced to more advanced programming concepts with Javascript such as
                 datastructures as well as how to make complex websites with user authentication and databases.
               </Btext>
               <Button onClick={() => router.push('/signup')}>Sign Up</Button>
@@ -61,10 +61,10 @@ export default function classes() {
                 classes for students of all skill levels.
               </Btext>
               <Btext>
-                students will go over all of the same curriculum as the group classes but will have better access to
+                Students will go over all of the same curriculum as the group classes but will have better access to
                 tutors.
               </Btext>
-              <Btext>Classes meet once per week.</Btext>
+              <Btext mb='0.5rem'>Classes meet once per week.</Btext>
               <Button onClick={() => router.push('/signup')}>Sign Up</Button>
             </Card>
           </SimpleGrid>
