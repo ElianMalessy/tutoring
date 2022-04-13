@@ -3,7 +3,7 @@ const withImages = require('next-images');
 
 const nextConfig = {
   images: {
-    domains: ['gluiq.com'],
+    domains: ['gluiq.com', 'cdn.discordapp.com'],
     disableStaticImages: true
   }
 };

@@ -14,14 +14,17 @@ export default function classes() {
       <div className={styles.container}>
         <Head>
           <title>Classes - Davis Coding Tutoring</title>
-          <meta name='description' content='Free coding tutoring home page' />
+          <meta name='description' content='Free coding tutoring classes page' />
         </Head>
         <main className={styles.main}>
           <SimpleGrid h='100%' gap={4} maxW='80vw' py='1rem'>
             <Heading mt='0.5rem'>Our Classes</Heading>
             <Text mt='-1rem'>
-              Note: As of now, our classes teach exclusively Scratch, HTML, CSS, and Javascript. There may be an
-              expansion to include other languages in the future.
+              <Text as='span' fontWeight={700}>
+                Note:
+              </Text>{' '}
+              As of now, our classes teach exclusively Scratch, HTML, CSS, and Javascript. There may be an expansion to
+              include other languages in the future.
             </Text>
             <hr />
             <Card bg={bg} py='0.75rem'>
@@ -60,9 +63,10 @@ export default function classes() {
                 </Btext>
                 classes for students of all skill levels.
               </Btext>
+              <Btext>Lessons will be personalized for each student in terms of pace and content.</Btext>
               <Btext>
-                Students will go over all of the same curriculum as the group classes but will have better access to
-                tutors.
+                Students will go over all of the same general curriculum as the group classes but students will be able
+                to recieve more attention and help from their tutor in lessons.
               </Btext>
               <Btext mb='0.5rem'>Classes meet once per week.</Btext>
               <Button onClick={() => router.push('https://forms.gle/yoZH6XCvBq4VX8yZ9')}>Sign up</Button>

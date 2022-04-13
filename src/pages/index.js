@@ -27,7 +27,7 @@ export default function Home() {
               <p className={styles.description}>
                 Learn how to
                 <code className={styles.code}>
-                  <Typical loop={Infinity} wrapper='b' steps={['', 1000, '', 1000, 'code', 2000]} />
+                  <Typical loop={Infinity} wrapper='b' steps={['', 1000, 'code', 2000, '', 1000]} />
                 </code>
               </p>
             </Center>
