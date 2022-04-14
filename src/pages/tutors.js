@@ -18,6 +18,29 @@ const Title = ({ children }) => (
     {children}
   </Text>
 );
+const tutorInfo = [
+  {
+    name: 'Elian Malessy',
+    title: 'Founder/President',
+    info: [
+      'Junior at Davis Senior High school.',
+      'Has built many websites for projects.',
+      "Completed Harvards' Computer Science course CS50x.",
+      'Years of experience in tutoring in math and coding.'
+    ],
+    image: 'https://ca.slack-edge.com/T03512BBZED-U0391F9FPJT-d36fab942284-512'
+  },
+  {
+    name: 'David Wang',
+    title: 'Co-Founder/Vice President',
+    info: [
+      'Software Developer in 1678 Citrus Circuits FRC Robotics',
+      'Vice-President of the Davis Coding Club',
+      'Web Developer HTML/CSS/JS'
+    ],
+    image: 'https://ca.slack-edge.com/T03512BBZED-U035C6K9KEU-cc424259e2ec-512'
+  }
+];
 
 export default function tutors() {
   const router = useRouter();
@@ -44,26 +67,20 @@ export default function tutors() {
               </Button>
             </Text>
             <hr />
-            <Stack direction={['column', 'row']} w='80vw' spacing={'2rem'}>
-              <Box w='100%'>
-                <TutorName>Elian Malessy</TutorName>
-                <Title>Founder/President</Title>
-                <UnorderedList fontSize={'2xl'}>
-                  <ListItem>Junior at Davis Senior High school.</ListItem>
-                  <ListItem>Has built many websites for projects.</ListItem>
-                  <ListItem>Completed Harvards' Computer Science course CS50x.</ListItem>
-                  <ListItem>Years of experience in tutoring in math and coding.</ListItem>
-                </UnorderedList>
-              </Box>
-              <Box w='100%'>
-                <Image
-                  src='https://cdn.discordapp.com/attachments/960779228226408478/962792925002076280/SPOILER_unknown.png'
-                  alt='photo'
-                  height='300'
-                  width='300'
-                />
-              </Box>
-            </Stack>
+            {tutorInfo.map((tutor, index) => (
+              <Stack direction={['column', 'row']} w='80vw' spacing={'2rem'} key={index}>
+                <Box w='100%'>
+                  <TutorName>{tutor.name}</TutorName>
+                  <Title>{tutor.title}</Title>
+                  <UnorderedList fontSize={'xl'}>
+                    {tutor.info.map((info, index) => <ListItem key={index}>{info}</ListItem>)}
+                  </UnorderedList>
+                </Box>
+                <Box w='100%'>
+                  <Image src={tutor.image} alt={`photo of ${tutor.name}`} height='300' width='300' />
+                </Box>
+              </Stack>
+            ))}
           </SimpleGrid>
         </main>
       </div>

@@ -4,7 +4,7 @@ export default function Logo() {
   return (
     <Box>
       <Text fontSize='lg' fontWeight='bold'>
-        Logo
+        DCT
       </Text>
     </Box>
   );
