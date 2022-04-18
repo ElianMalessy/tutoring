@@ -68,18 +68,20 @@ export default function tutors() {
             </Text>
             <hr />
             {tutorInfo.map((tutor, index) => (
-              <Stack direction={['column', 'row']} w='80vw' spacing={'2rem'} key={index}>
-                <Box w='100%'>
-                  <TutorName>{tutor.name}</TutorName>
-                  <Title>{tutor.title}</Title>
-                  <UnorderedList fontSize={'xl'}>
-                    {tutor.info.map((info, index) => <ListItem key={index}>{info}</ListItem>)}
-                  </UnorderedList>
-                </Box>
-                <Box w='100%'>
-                  <Image src={tutor.image} alt={`photo of ${tutor.name}`} height='300' width='300' />
-                </Box>
-              </Stack>
+              <Fragment>
+                <Stack direction={['column', 'row']} w='80vw' spacing={'2rem'} key={index} mb='1rem'>
+                  <Box w='100%'>
+                    <TutorName>{tutor.name}</TutorName>
+                    <Title>{tutor.title}</Title>
+                    <UnorderedList fontSize={'xl'}>
+                      {tutor.info.map((info, index) => <ListItem key={index}>{info}</ListItem>)}
+                    </UnorderedList>
+                  </Box>
+                  <Box w='100%'>
+                    <Image src={tutor.image} alt={`photo of ${tutor.name}`} height='300' width='300' />
+                  </Box>
+                </Stack>
+              </Fragment>
             ))}
           </SimpleGrid>
         </main>

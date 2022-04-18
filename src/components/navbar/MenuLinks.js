@@ -1,10 +1,6 @@
 import { Stack } from '@chakra-ui/react';
 import MenuItem from './MenuItem';
-import { useColorMode, Button } from '@chakra-ui/react';
-import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 export default function MenuLinks() {
-  const { colorMode, toggleColorMode } = useColorMode();
-
   return (
     <Stack
       spacing={8}
@@ -13,9 +9,6 @@ export default function MenuLinks() {
       direction={['column', 'row', 'row', 'row']}
       pt={[4, 4, 0, 0]}
     >
-      <Button onClick={toggleColorMode} aria-label='colorMode Selector'>
-        {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-      </Button>
       <MenuItem to='/'>Home</MenuItem>
       <MenuItem to='https://forms.gle/yoZH6XCvBq4VX8yZ9'>Sign up</MenuItem>
       <MenuItem to='/classes'>Classes</MenuItem>

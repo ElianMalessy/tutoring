@@ -1,11 +1,10 @@
 import styles from '../../styles/Home.module.css';
 import Navbar from '../components/navbar/Navbar';
 import { Fragment } from 'react';
-import { Box, Heading, SimpleGrid, Text, useColorModeValue, Button } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid, Text, Button } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 export default function classes() {
-  const bg = useColorModeValue('gray.300', 'gray.900');
   const router = useRouter();
 
   return (
@@ -27,7 +26,7 @@ export default function classes() {
               include other languages in the future.
             </Text>
             <hr />
-            <Card bg={bg} py='0.75rem'>
+            <Card bg={'gray.900'} py='0.75rem'>
               <Heading textAlign={'center'}>Group Lessons</Heading>
               <Btext mt='0.5rem'>
                 <Btext as='span' fontWeight={700}>
@@ -55,7 +54,7 @@ export default function classes() {
               </Btext>
               <Button onClick={() => router.push('https://forms.gle/yoZH6XCvBq4VX8yZ9')}>Sign up</Button>
             </Card>
-            <Card bg={bg} py='0.75rem'>
+            <Card bg={'gray.900'} py='0.75rem'>
               <Heading textAlign={'center'}>1 on 1 Lessons</Heading>
               <Btext mt='0.5rem'>
                 <Btext as='span' fontWeight={700}>

@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styles from '../../styles/Home.module.css';
 import Navbar from '../components/navbar/Navbar';
 import { Fragment } from 'react';
-import { Center } from '@chakra-ui/react';
+import { Center, Text } from '@chakra-ui/react';
 import StatsGridWithImage from '../components/gridWithImage/GridWithImage';
 import Typical from 'react-typical';
 
@@ -21,7 +21,7 @@ export default function Home() {
         <main className={styles.main}>
           <StatsGridWithImage>
             <Center w='100vw' mt='1rem'>
-              <strong className={styles.title}>Welcome to DCT!</strong>
+              <strong className={styles.title}>DCT</strong>
             </Center>
             <Center w='100vw'>
               <p className={styles.description}>

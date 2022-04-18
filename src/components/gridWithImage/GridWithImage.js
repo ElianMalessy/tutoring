@@ -63,7 +63,7 @@ export default function StatsGridWithImage({ children }) {
                 transition={{ ease: 'easeOut', duration: 1 }}
               >
                 <Heading mb={5} fontSize={{ base: '3xl', md: '5xl' }}>
-                  “Everybody should learn to program a computer, because it teaches you how to think.
+                  “Everybody should learn to program a computer, because it teaches you how to think."
                   <motion.div
                     ref={refArr[1][0]}
                     initial={{ x: -300, opacity: 0 }}
@@ -103,8 +103,30 @@ export default function StatsGridWithImage({ children }) {
               ))}
             </SimpleGrid>
           </Stack>
+
           <Flex flex={1} />
         </Stack>
+        <Box bg={'gray.900'} borderRadius={'1rem'} p='1rem' mb='3rem' mt='5rem'>
+          <motion.div
+            initial={{ y: '-1000', opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{
+              delay: 1,
+              y: {
+                duration: 1,
+                type: 'spring',
+                damping: 5,
+                stiffness: 50
+              }
+            }}
+          >
+            <Text fontSize={'2xl'}>
+              We are an organization run by high school students which provides kids of all ages the opportunity to
+              learn programming and problem solving skills. Our misson is to educate the future generation and give them
+              the tools to succeed and innovate in an increasingly technology dependent world.
+            </Text>
+          </motion.div>
+        </Box>
       </Container>
     </Box>
   );
