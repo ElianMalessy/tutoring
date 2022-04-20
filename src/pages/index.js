@@ -14,14 +14,14 @@ export default function Home() {
       <Navbar />
       <div className={styles.container}>
         <Head>
-          <title>Davis Coding Tutoring</title>
+          <title>Kickstart Coding Tutors</title>
           <meta name='description' content='Free coding tutoring home page' />
         </Head>
 
         <main className={styles.main}>
           <StatsGridWithImage>
             <Center w='100vw' mt='1rem'>
-              <strong className={styles.title}>DCT</strong>
+              <strong className={styles.title}>Kickstart Coding Tutoring</strong>
             </Center>
             <Center w='100vw'>
               <p className={styles.description}>

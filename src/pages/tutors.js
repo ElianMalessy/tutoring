@@ -34,6 +34,7 @@ const tutorInfo = [
     name: 'David Wang',
     title: 'Co-Founder/Vice President',
     info: [
+      'Junior at Davis Senior High school',
       'Software Developer in 1678 Citrus Circuits FRC Robotics',
       'Vice-President of the Davis Coding Club',
       'Web Developer HTML/CSS/JS'
@@ -57,7 +58,7 @@ export default function tutors() {
           <SimpleGrid h='100%' gap={4} w='80vw' py='1rem'>
             <Heading mt='0.5rem'>Our Tutors</Heading>
             <Text as='div' mt='-1rem'>
-              If you want to join DCT as a tutor, you can sign up here.{' '}
+              If you want to join KCT as a tutor, you can sign up here.{' '}
               <Text as='span' fontWeight={700}>
                 Note:{' '}
               </Text>
