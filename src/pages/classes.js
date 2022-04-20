@@ -12,7 +12,7 @@ export default function classes() {
       <Navbar />
       <div className={styles.container}>
         <Head>
-          <title>Classes - Davis Coding Tutoring</title>
+          <title>Classes - Kickstart Coding Tutors</title>
           <meta name='description' content='Free coding tutoring classes page' />
         </Head>
         <main className={styles.main}>

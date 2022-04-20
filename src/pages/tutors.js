@@ -5,8 +5,6 @@ import { Button, Text, SimpleGrid, Heading, UnorderedList, ListItem, Box, Stack 
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Image from 'next/image';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
 const TutorName = ({ children }) => (
   <Text fontWeight={700} fontSize={'5xl'}>
@@ -51,7 +49,7 @@ export default function tutors() {
       <Navbar />
       <div className={styles.container}>
         <Head>
-          <title>Tutors - Davis Coding Tutoring</title>
+          <title>Tutors - Kickstart Coding Tutoring</title>
           <meta name='description' content='Free coding tutoring tutors page' />
         </Head>
         <main className={styles.main}>
